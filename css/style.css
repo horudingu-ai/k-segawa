@@ -2,7 +2,9 @@
 .header { display: flex;
     justify-content: space-between;
   align-items: center;
-margin-bottom: 30px
+margin-bottom: 30px;
+top: 0;
+left:0;
 }
 
  /*ポテパンキャンプロゴ*/
@@ -56,14 +58,16 @@ cursor: pointer;}
 }
 /*カウンセリングボタン*/
 .counsel-btn:hover {cursor: pointer;
-background-color: aliceblue;}
+background-color: aliceblue;
+}
 
 
 
 /*ナビゲーション＋カウンセリングボタン*/
 .navarea{display: flex;
-align-items: center;
-gap: 23px;}
+margin-right: 20px;
+gap: 23px;
+z-index: 1998;}
 
 
 /*メインビジュアル*/
@@ -81,7 +85,9 @@ position: relative;
 
 
 /*メインビジュアルタイトル*/
-.write{font-size: 42px;}
+.write{font-size: 42px;
+   z-index: 1000;
+}
 
 /*メインビジュアルカウンセリングボタン*/
 .mmbtn{
@@ -120,8 +126,9 @@ position: relative;
 
 
 /* メインビジュアル（うんこ）全体 */
-.うんこbro {background-color: white;}
-
+.うんこbro {background-color: white;
+ z-index: 1000;
+}
 
 .logo {position: relative;
 z-index: 10;
@@ -213,22 +220,153 @@ max-width: 300px;
   font-size: 0.7vw;
    max-width: 500px;
   color: black;
-}
 
+  .hamburger{
+    margin-right: 20px;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 10240px)
+{
+.hamburger {
+visibility: hidden;
+display: none;
+}
+}
 /* 画面を小さくしたとき */
 
 @media only screen and (min-width: 768px) and (max-width: 1024px)
 {
+.logo{
+  width: 15%;
+  top: 0%;
+}
+
+.counsel-btn {
+  display: inline-block; /* blockではなくinline-block */
+  width: 30px;           /* 自動幅に戻す */
+  padding: 12px 24px;   
+  border-radius: 30px;
+  background-color: orange;
+  color: #fff;
+  text-align: center;
+  position: row;
+}
+
+
+/*ナビエリア*/
+.navarea {
+ position: row;
+  right: 20px;
+  bottom: 20px;
+ 
+}
+
+/*ナビゲーション*/
+.gnav ul{ flex-direction: column; }
+
+.navarea{
+  flex-direction: row;
+  position: fixed;
+  right: -100%;
+  transition: all 0.5s;
+  z-index: 9999;
+}
+
+.ichi, .hana, .satoh, .tsuki, .tachi{
+  color: white;
+  font-size: 16px;
+}
+
+.kokoro, .sumi, .koha, .yura, .anna{
+  color: orange;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.hamburger {
+display: block;
+position: fixed;
+top: 0;
+right: 0;
+border: none;
+outline: none;
+appearance: none; 
+cursor: pointer;
+}
+
+.hamburger span{
+  display: block;
+  height: 3px;
+  width: 40px;
+margin-top: 10px;
+background-color: gray;
+transition: all 0.5s;
+top: 5%;
+right: 20px;
+}
+
+#mask{
+  text-align: center;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.486);
+  z-index: 99;
+}
+.logo{position: relative;}
+.open .navarea{
+  position: absolute;
+  top: 120px;
+  right: 450px;
+  height: 150%;
+  width: 50px;
+  z-index: 9334;
+}
+.open #mask{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-color:  rgba(0, 0, 0, 0,5);
+  z-index: 98;
+  transition: all 0.5s;
+}
+
+/* ハンバーガーメニュー展開時のメニュー背景 */
+.open .navarea {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;             
+  height: 100vh;          
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 無料カウンセリングボタン */
+.open .navarea .counsel-btn {
+  width: auto;             
+  height: auto;           
+  padding: 10px 25px;     
+  border-radius: 30px;
+  background-color: orange;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  display: inline-block;  
+}
+
+
+
+
 .うんこ1{
-  max-width: 150px;
+  max-width: 330px;
 }
 .mainvisual {
     height: 60vh;
   }
-
-.gnav a{
- display: none; 
-}
 
 
   .write {
@@ -252,11 +390,16 @@ max-width: 300px;
 
  .WN1 {
     font-size: 3vw;
-    width: 15%;
+    width: 25%;
     left: 60%;
-    top: 40%;
+    top: 32%;
 
   } 
+.うんこ3{
+  width: 105%;
+  left: -2%;
+  top: 11%;
+}
 }
 
 
@@ -298,5 +441,5 @@ max-width: 300px;
     left: 47%;
     top: 40%;
 
-  } 
+  }
 }
