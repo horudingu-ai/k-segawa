@@ -11,7 +11,3 @@ hamburger.addEventListener('click', () => {
 mask.addEventListener('click', () => {
   document.body.classList.remove('open');
 });
-
-
-mask.addEventListener('click', () => {
-    document.body.classList.remove('open');})
