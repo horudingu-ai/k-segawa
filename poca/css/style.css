@@ -64,7 +64,7 @@ background-color: aliceblue;
 
 .logo {position: absolute;}
 /*ナビゲーション＋カウンセリングボタン*/
-@media only screen and (min-width: 1025px) and (max-width: 1145141919810px)
+@media only screen and (min-width: 1025px) 
 {
 .navarea{ position: relative;
 left: 700px;
@@ -225,7 +225,7 @@ max-width: 300px;
   font-size: 0.7vw;
    max-width: 500px;
   color: black;}
-@media only screen and (min-width: 1025px) and (max-width: 1145141919810px)
+@media only screen and (min-width: 1025px)
 {
   .hamburger{
     margin-right: 20px;
@@ -667,3 +667,4 @@ transition: all 0.5s;
 
 
 }
+
