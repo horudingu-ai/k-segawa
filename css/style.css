@@ -64,7 +64,7 @@ background-color: aliceblue;
 
 .logo {position: absolute;}
 /*ナビゲーション＋カウンセリングボタン*/
-@media only screen and (min-width: 1025px) and (max-width: 1145141919810px)
+@media only screen and (min-width: 1025px)
 {
 .navarea{ position: relative;
 left: 700px;
@@ -72,6 +72,12 @@ top: -64px;
 z-index: 1998;
 gap: 15px;
 display: flex;
+}
+
+ .hamburger{
+    margin-right: 20px;
+visibility: hidden;
+display: none;
 }
 }
 
@@ -225,19 +231,6 @@ max-width: 300px;
   font-size: 0.7vw;
    max-width: 500px;
   color: black;}
-@media only screen and (min-width: 1025px) and (max-width: 1145141919810px)
-{
-  .hamburger{
-    margin-right: 20px;
-  }
-
-.hamburger {
-visibility: hidden;
-display: none;
-}
-}
-
-
 
 /* 画面を小さくしたとき */
 
@@ -589,6 +582,17 @@ transition: all 0.5s;
   display: inline-block;  
 }
 
+.open .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.open .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -7px);
+}
 
 .mainvisual {
     height: 60vh;
@@ -654,5 +658,4 @@ transition: all 0.5s;
 .jk{
   display: none;
 }
-
 }
